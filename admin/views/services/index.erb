@@ -1,0 +1,38 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first active"><%= link_to pat(:list), url(:services, :index) %></li>
+      <li><%= link_to pat(:new), url(:services, :new) %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 class="title"><%= pat(:all) %> <% mt(:services) %></h2>
+    <div class="inner">
+      <table class="table">
+        <tr>
+          <th class="first"><%= mat(:service, :id) %></th>
+          <th><%= mat(:service, :name) %></th>
+          <th><%= mat(:service, :description) %></th>
+          <th><%= mat(:service, :url) %></th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @services.each do |service| %>
+        <tr>
+          <td class="first"><%= service.id %></td>
+          <td><%= service.name %></td>
+          <td><%= service.description %></td>
+          <td><%= service.url %></td>
+          <td class="last">
+            <%= button_to pat(:edit), url(:services, :edit, :id => service.id), :method => :get, :class => :button_to %> |
+            <%= button_to pat(:delete), url(:services, :destroy, :id => service.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')" %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :sidebar, partial("base/sidebar") %>
