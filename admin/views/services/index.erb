@@ -10,15 +10,13 @@
     <div class="inner">
       <table class="table">
         <tr>
-          <th class="first"><%= mat(:service, :id) %></th>
-          <th><%= mat(:service, :name) %></th>
+          <th class="first"><%= mat(:service, :name) %></th>
           <th><%= mat(:service, :description) %></th>
           <th><%= mat(:service, :url) %></th>
           <th class="last">&nbsp;</th>
         </tr>
         <% @services.each do |service| %>
         <tr>
-          <td class="first"><%= service.id %></td>
           <td><%= service.name %></td>
           <td><%= service.description %></td>
           <td><%= service.url %></td>
