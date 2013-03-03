@@ -26,6 +26,8 @@ gem 'therubyracer'
 
 gem 'foreman'
 
+gem 'redis'
+
 group :development do
   gem 'dm-sqlite-adapter'
 end
