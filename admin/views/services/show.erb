@@ -1,0 +1,18 @@
+<h2><%= @service.name %></h2>
+
+<p><%= @service.description %></p>
+
+<table width="50%">
+<thead>
+	<tr><th>Node</th><th>Last Checkin</th></tr>
+</thead>
+<% @nodes.each do |node| %>
+<tr align="center"><td><%= node %></td><td><%= @checkins[node] %></td></tr>
+<% end %>
+</table>
+
+<p>To use this service, just:</p>
+
+<p><code>curl http://<%= request.host + ':' + request.port.to_s + '/' + @service.url %>/node-name-here</code></p>
+
+<br/>

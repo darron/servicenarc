@@ -25,6 +25,13 @@ Admin.controllers :services do
     render 'services/edit'
   end
 
+  get :show, :with => :id do
+    @service = Service.get(params[:id])
+    @nodes = ServiceHit.list_members(@service.url)
+    @checkins = ServiceHit.nodes_checkin_list(@service.url, @nodes)
+    render 'services/show'
+  end
+
   put :update, :with => :id do
     @service = Service.get(params[:id])
     if @service.update(params[:service])

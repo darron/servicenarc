@@ -21,6 +21,7 @@
           <td><%= service.description %></td>
           <td><a href="/<%= service.url %>"><%= service.url %></a> | <%= ServiceHit.list_members(service.url) %></td>
           <td class="last">
+            <%= button_to pat(:show), url(:services, :show, :id => service.id), :method => :get, :class => :button_to %> |
             <%= button_to pat(:edit), url(:services, :edit, :id => service.id), :method => :get, :class => :button_to %> |
             <%= button_to pat(:delete), url(:services, :destroy, :id => service.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')" %>
           </td>
