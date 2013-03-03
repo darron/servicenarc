@@ -12,8 +12,9 @@ Heroku w/Postgres<br/>
 Redis
 
 To deploy:
+----------
 
-	git clone https://github.com/darron/servicenarc.git
+	Fork and clone this repo
 	heroku create
 	heroku addons:add redistogo
 	git push heroku master
@@ -22,6 +23,7 @@ To deploy:
 	heroku open
 
 One that's done:
+----------------
 
 1. Browse to /admin/ - enter the username and password you entered during the seed stage.
 2. Create your first "Service"
@@ -29,8 +31,10 @@ One that's done:
 4. Use that curl command on all of your servers with a unique node name for each.
 
 TODO
-====
+----
 
 1. Add display of all Services and their individual Node states to the homepage dashboard.
 2. Email status of all Services and their individual Node states each day to each user.
 3. Clean up Padrino boilerplate.
+
+Patches are welcome - send a pull request and I'll gladly look at it.
