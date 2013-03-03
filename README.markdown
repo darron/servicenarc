@@ -11,10 +11,11 @@ Requirements
 Heroku w/Postgres<br/>
 Redis
 
-To deploy:
-----------
+To deploy
+---------
 
-	Fork and clone this repo
+Fork and clone this repo - then:
+
 	heroku create
 	heroku addons:add redistogo
 	git push heroku master
