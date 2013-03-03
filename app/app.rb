@@ -45,10 +45,6 @@ class Servicenarc < Padrino::Application
   #     disable :asset_stamp # no asset timestamping for dev
   #   end
   #
-  
-  # Redis
-  uri = URI.parse(ENV["REDISTOGO_URL"])
-  $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 
   ##
   # You can manage errors like:

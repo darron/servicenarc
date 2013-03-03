@@ -17,3 +17,7 @@ case Padrino.env
   when :production  then DataMapper.setup(:default, ENV["DATABASE_URL"])
   when :test        then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "test.db"))
 end
+
+# Redis
+uri = URI.parse(ENV["REDISTOGO_URL"])
+$redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
