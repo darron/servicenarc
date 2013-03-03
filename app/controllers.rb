@@ -10,7 +10,9 @@ Servicenarc.controller do
     end
     
     unless service.nil?
-      return "Found a service."
+      hit = ServiceHit.new
+      hit.store(service.url, node, request.ip, Time.now.utc)
+      return 200
     else
       return "Nothing to see here."
     end
