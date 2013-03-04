@@ -3,9 +3,9 @@ Admin.helpers do
 		unless time.nil?
 			checkin = Time.parse(time)
 			if checkin > (Time.now - 86400)
-				return "Lookin good."
+				return "OK"
 			else
-				return "OMG"
+				return "Late"
 			end
 		else
 			return "No checkin yet."
