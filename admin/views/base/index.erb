@@ -4,11 +4,12 @@
     <div class="inner">
       <% @services.each do |service| %>
       	<h3><%= service.name %> - <%= service.description %></h3>
-      	<ol style="margin-left:25px;">
+      	<table width="50%">
+      	<tr><th>Name</th><th>Last Checkin</th><th>Status</th></tr>
       	<% @nodes[service.url].each do |node| %>
-      		<li><%= node %> - <%= @checkins[service.url][node] ||= "No checkin yet." %></li>
+      		<tr align="center"><td><%= node %></td><td><%= time_ago_in_words(@checkins[service.url][node]) %></td><td>S</td></tr>
       	<% end %>
-      	</ol>
+      	</table>
       <% end %>
     </div>
   </div>
