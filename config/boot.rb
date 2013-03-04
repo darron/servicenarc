@@ -7,6 +7,10 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 ##
 # ## Enable devel logging
 #

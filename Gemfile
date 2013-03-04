@@ -36,6 +36,7 @@ group :production do
  gem 'pg'
  gem 'do_postgres'
  gem 'dm-postgres-adapter'
+ gem 'newrelic_rpm'
 end
 
 # Test requirements

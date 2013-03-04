@@ -52,6 +52,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
+    newrelic_rpm (3.5.8.70)
     padrino (0.10.7)
       padrino-admin (= 0.10.7)
       padrino-cache (= 0.10.7)
@@ -139,6 +140,7 @@ DEPENDENCIES
   erubis (~> 2.7.0)
   foreman
   less
+  newrelic_rpm
   padrino (= 0.10.7)
   pg
   rack-less
