@@ -29,6 +29,7 @@ Bundler.require(:default, PADRINO_ENV)
 #   include Padrino::Helpers::NumberHelpers
 #   include Padrino::Helpers::TranslationHelpers
 # end
+Time.zone = "UTC"
 
 ##
 # Add your before (RE)load hooks here

@@ -42,5 +42,6 @@ TODO
 8. Store IP's for each node and note if it changes.
 9. Add more logging to track usage.
 10. Create node pages to view all Services in use on a particular node.
+11. List of ongoing checkins - on Status Page - last X number.
 
 Patches are welcome - send a pull request and I'll gladly look at it.

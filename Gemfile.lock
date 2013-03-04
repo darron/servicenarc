@@ -116,6 +116,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    tzinfo (0.3.36)
     unicorn (4.6.2)
       kgio (~> 2.6)
       rack
@@ -150,4 +151,5 @@ DEPENDENCIES
   rspec
   sinatra-flash
   therubyracer
+  tzinfo
   unicorn

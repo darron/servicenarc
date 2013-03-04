@@ -28,6 +28,8 @@ gem 'foreman'
 
 gem 'redis'
 
+gem 'tzinfo'
+
 group :development do
   gem 'dm-sqlite-adapter'
 end
