@@ -1,0 +1,12 @@
+    <h2 class="title">Service Status</h2>
+    <div class="inner">
+      <% @services.each do |service| %>
+      	<h3><%= service.name %> - <%= service.description %></h3>
+      	<table width="50%">
+      	<tr><th>Name</th><th>Last Checkin</th><th>Status</th></tr>
+      	<% @nodes[service.url].each do |node| %>
+      		<tr align="center"><td><%= node %></td><td><%= @checkins[service.url][node] %></td><td><%= Node.node_stale(@checkins[service.url][node]) %></td></tr>
+      	<% end %>
+      	</table>
+      <% end %>
+    </div>
