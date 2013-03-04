@@ -34,9 +34,7 @@ One that's done:
 TODO
 ----
 
-1. Add display of all Services and their individual Node states to the homepage dashboard.
 2. Email status of all Services and their individual Node states each day to each user.
-3. Clean up Padrino boilerplate.
 4. Upon deleting of a Service, delete all Redis data with it.
 5. Show more historical data on a / service / node basis. Redis only stores 30 / service / node - we don't care more than that.
 6. Show time sequence trend and indicate whether a particular node is late / missing.
@@ -44,6 +42,5 @@ TODO
 8. Store IP's for each node and note if it changes.
 9. Add more logging to track usage.
 10. Create node pages to view all Services in use on a particular node.
-11. Timezone support - based on Heroku ENV variable.
 
 Patches are welcome - send a pull request and I'll gladly look at it.
