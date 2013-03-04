@@ -45,6 +45,10 @@ class Servicenarc < Padrino::Application
   #     disable :asset_stamp # no asset timestamping for dev
   #   end
   #
+  
+  configure :production do
+    require 'newrelic_rpm'
+  end
 
   ##
   # You can manage errors like:
