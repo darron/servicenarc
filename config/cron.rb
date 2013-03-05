@@ -19,5 +19,4 @@ end
 
 every(15.minutes, 'hit.admin') do
   raw = RestClient.get('http://' + ENV['SERVICENARC_DOMAIN_NAME'] + '/admin/')
-  puts "hitting admin"
 end
