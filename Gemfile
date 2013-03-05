@@ -30,6 +30,9 @@ gem 'redis'
 
 gem 'tzinfo'
 
+gem 'clockwork'
+gem 'rest-client'
+
 group :development do
   gem 'dm-sqlite-adapter'
 end

@@ -25,6 +25,9 @@ Fork and clone this repo - then:
 	heroku config:set EMAIL_FROM="put@email.address.here"
 	heroku addons:add newrelic:standard
 	heroku config:add RACK_ENV=production
+	heroku config:add SERVICENARC_DOMAIN_NAME="put.your.domain.name.here"
+	heroku config:add SERVICENARC_SENDMAIL_TZ="MST"
+	heroku config:add SERVICENARC_SENDMAIL_TIME="7:45"
 	heroku open
 
 One that's done:
@@ -38,7 +41,6 @@ One that's done:
 TODO
 ----
 
-2. Email status of all Services and their individual Node states each day to each user.
 4. Upon deleting of a Service, delete all Redis data with it.
 5. Show more historical data on a / service / node basis. Redis only stores 30 / service / node - we don't care more than that.
 6. Show time sequence trend
