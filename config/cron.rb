@@ -10,7 +10,9 @@ Clockwork.configure do |config|
 end
 
 handler do |job|
-  raw = RestClient.get('http://' + ENV['SERVICENARC_DOMAIN_NAME'] + '/sendmail')
+  puts "Running #{job}"
 end
 
-every(1.day, 'send.email', :at => ENV['SERVICENARC_SENDMAIL_TIME'], :tz => ENV['SERVICENARC_SENDMAIL_TZ'])
+every(1.day, 'send.email', :at => ENV['SERVICENARC_SENDMAIL_TIME'], :tz => ENV['SERVICENARC_SENDMAIL_TZ']) do
+  raw = RestClient.get('http://' + ENV['SERVICENARC_DOMAIN_NAME'] + '/sendmail')
+end
