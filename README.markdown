@@ -21,6 +21,10 @@ Fork and clone this repo - then:
 	git push heroku master
 	heroku run rake dm:migrate
 	heroku run rake seed
+	heroku addons:add sendgrid:starter
+	heroku config:set EMAIL_FROM="put@email.address.here"
+	heroku addons:add newrelic:standard
+	heroku config:add RACK_ENV=production
 	heroku open
 
 One that's done:
@@ -37,7 +41,7 @@ TODO
 2. Email status of all Services and their individual Node states each day to each user.
 4. Upon deleting of a Service, delete all Redis data with it.
 5. Show more historical data on a / service / node basis. Redis only stores 30 / service / node - we don't care more than that.
-6. Show time sequence trend and indicate whether a particular node is late / missing.
+6. Show time sequence trend
 7. Notifications when something is late / missing.
 8. Store IP's for each node and note if it changes.
 9. Add more logging to track usage.
