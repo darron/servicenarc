@@ -16,3 +16,8 @@ end
 every(1.day, 'send.email', :at => ENV['SERVICENARC_SENDMAIL_TIME'], :tz => ENV['SERVICENARC_SENDMAIL_TZ']) do
   raw = RestClient.get('http://' + ENV['SERVICENARC_DOMAIN_NAME'] + '/sendmail')
 end
+
+every(15.minutes, 'hit.admin') do
+  raw = RestClient.get('http://' + ENV['SERVICENARC_DOMAIN_NAME'] + '/admin/')
+  puts "hitting admin"
+end
