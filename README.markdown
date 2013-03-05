@@ -41,13 +41,6 @@ One that's done:
 TODO
 ----
 
-4. Upon deleting of a Service, delete all Redis data with it.
-5. Show more historical data on a / service / node basis. Redis only stores 30 / service / node - we don't care more than that.
-6. Show time sequence trend
-7. Notifications when something is late / missing.
-8. Store IP's for each node and note if it changes.
-9. Add more logging to track usage.
-10. Create node pages to view all Services in use on a particular node.
-11. List of ongoing checkins - on Status Page - last X number.
+All logged in [issues](https://github.com/darron/servicenarc/issues).
 
 Patches are welcome - send a pull request and I'll gladly look at it.
