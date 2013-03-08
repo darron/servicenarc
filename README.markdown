@@ -28,6 +28,8 @@ Fork and clone this repo - then:
 	heroku config:add SERVICENARC_DOMAIN_NAME="put.your.domain.name.here"
 	heroku config:add SERVICENARC_SENDMAIL_TZ="MST"
 	heroku config:add SERVICENARC_SENDMAIL_TIME="7:45"
+	padrino rake secret
+	heroku config:add SESSION_SECRET="output-of-previous-command"
 	heroku open
 
 One that's done:
